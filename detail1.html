@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Toko - Agian Laundry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .store-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .store-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .store-info {
+            flex: 1;
+        }
+        .store-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .store-rating {
+            color: #ffbf00;
+            font-size: 18px;
+        }
+        .store-description {
+            margin-top: 10px;
+            color: #555;
+        }
+        .store-stats {
+            display: flex;
+            margin-top: 20px;
+        }
+        .store-stat {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .store-stat:last-child {
+            border-right: none;
+        }
+        .store-stat h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .store-stat p {
+            margin: 5px 0 0;
+            color: #777;
+        }
+        .products {
+            margin-top: 30px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-card h4 {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .product-card p {
+            margin: 5px 0;
+            color: #e74c3c;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="store-header">
+            <img src="agian.jpg" alt="Logo Toko" class="store-logo">
+            <div class="store-info">
+                <div class="store-name">Agian Laundry</div>
+                <div class="store-rating">★★★★☆ (4.5)</div>
+                <div class="store-description">
+                    Deskripsi singkat toko. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nulla vel justo nec nisi tincidunt tincidunt.
+                </div>
+            </div>
+        </div>
+        <div class="store-stats">
+            <div class="store-stat">
+                <h3>10K+</h3>
+                <p>Produk Terjual</p>
+            </div>
+            <div class="store-stat">
+                <h3>95%</h3>
+                <p>Ulasan Positif</p>
+            </div>
+            <div class="store-stat">
+                <h3>2 Tahun</h3>
+                <p>Bergabung</p>
+            </div>
+        </div>
+        <div class="products">
+            <h2>Layanan Kami</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="agian.jpg" alt="Produk 1">
+                    <h4>Laundry Express</h4>
+                    <p>Rp 7.000</p>
+                </div>
+                <div class="product-card">
+                    <img src="agian.jpg" alt="Produk 2">
+                    <h4>Cuci Kering</h4>
+                    <p>Rp 150.000</p>
+                </div>
+                <div class="product-card">
+                    <img src="agian.jpg" alt="Produk 3">
+                    <h4>Laundry Boneka</h4>
+                    <p>Rp 200.000</p>
+                </div>
+                <div class="product-card">
+                    <img src="agian.jpg" alt="Produk 4">
+                    <h4>Laundry Kiloan</h4>
+                    <p>Rp 250.000</p>
+                </div>
+                <div class="product-card">
+                    <img src="agian.jpg" alt="Produk 4">
+                    <h4>Laundry Sepatu</h4>
+                    <p>Rp 250.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
