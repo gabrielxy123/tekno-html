@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akun Pelanggan Laundry</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        body {
+            background: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #005f73, #0a9396);
+            color: #fff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        header .menu {
+            display: flex;
+            align-items: center;
+        }
+        header .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+        header .menu a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .sidebar {
+            background-color: #fff;
+            width: 250px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #555;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            color: #ff5722;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .profile-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #28a745;
+        }
+        .profile-header h2 {
+            font-size: 22px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .profile-header p {
+            font-size: 14px;
+            color: #777;
+        }
+        .profile-info .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .profile-info .info-item i {
+            font-size: 18px;
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .profile-actions button {
+            margin: 10px 5px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .history-container {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .history-container h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .history-item .history-content {
+            flex: 1;
+        }
+        .history-item .history-content h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .history-item .history-content p {
+            font-size: 14px;
+            color: #555;
+        }
+        .history-item .history-status {
+            font-size: 14px;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">CariLaundry</div>
+        <div class="menu">
+            <a href="home.html">Beranda</a>
+            <a href="toko.html">Toko</a>
+            <a href="#">Bantuan</a>
+            <a href="login.html" onclick="logout(event)">Logout</a>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-user"></i>Profil</a></li>
+                <li><a href="#"><i class="fas fa-history"></i>History Pemesanan</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i>Edit Profil</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <!-- Profil Pelanggan -->
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img src="anonymus.jpg" alt="User Avatar">
+                    <h2>Anonymous</h2>
+                    <p>Anonymous@gmail.com</p>
+                </div>
+                <div class="profile-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+62 123 4567 890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Jl. Contoh No. 123, Jakarta, Indonesia</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p>Bergabung Sejak: 1 Januari 2023</p>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button onclick="editProfile()">Edit Profil</button>
+                </div>
+            </div>
+
+            <!-- History Pemesanan -->
+            <div class="history-container">
+                <h3>History Pemesanan</h3>
+                <div class="history-item">
+                    <div class="history-content">
+                        <h4>Laundry Kilat</h4>
+                        <p>Tanggal: 10 Oktober 2023</p>
+                        <p>Total: Rp 50.000</p>
+                    </div>
+                    <div class="history-status">Selesai</div>
+                </div>
+                <div class="history-item">
+                    <div class="history-content">
+                        <h4>Laundry Reguler</h4>
+                        <p>Tanggal: 5 Oktober 2023</p>
+                        <p>Total: Rp 30.000</p>
+                    </div>
+                    <div class="history-status">Selesai</div>
+                </div>
+                <div class="history-item">
+                    <div class="history-content">
+                        <h4>Laundry Express</h4>
+                        <p>Tanggal: 1 Oktober 2023</p>
+                        <p>Total: Rp 75.000</p>
+                    </div>
+                    <div class="history-status">Selesai</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function editProfile() {
+            Swal.fire('Fitur edit profil akan segera tersedia!', '', 'info');
+        }
+        function logout(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Logout',
+                text: 'Anda yakin ingin logout?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, Logout',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Anda telah logout.', '', 'success');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
