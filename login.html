@@ -142,15 +142,14 @@
 
     <script>
         document.getElementById('login-form').addEventListener('submit', function (e) {
-            e.preventDefault(); // Mencegah form submit default
+            e.preventDefault(); 
 
-            // Simulasi validasi login
+
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
             if (username === "admin" && password === "password") {
-                // Redirect ke halaman dashboard jika login berhasil
-                window.location.href = "home.html"; // Ganti dengan halaman tujuan Anda
+                window.location.href = "home.html";
             } else {
                 alert("Username atau password salah!");
             }
