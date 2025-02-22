@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Toko Laundry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Pendaftaran Toko Laundry</h2>
+        <form action="#" method="POST">
+            <!-- Nama Toko -->
+            <div class="form-group">
+                <label for="nama-toko">Nama Toko</label>
+                <input type="text" id="nama-toko" name="nama-toko" placeholder="Masukkan nama toko" required>
+            </div>
+
+            <!-- Alamat Toko -->
+            <div class="form-group">
+                <label for="alamat-toko">Alamat Toko</label>
+                <textarea id="alamat-toko" name="alamat-toko" placeholder="Masukkan alamat toko" required></textarea>
+            </div>
+
+            <!-- Deskripsi Toko -->
+            <div class="form-group">
+                <label for="deskripsi-toko">Deskripsi Toko</label>
+                <textarea id="deskripsi-toko" name="deskripsi-toko" placeholder="Masukkan deskripsi toko" required></textarea>
+            </div>
+
+            <!-- Nomor Telepon -->
+            <div class="form-group">
+                <label for="telepon-toko">Nomor Telepon</label>
+                <input type="tel" id="telepon-toko" name="telepon-toko" placeholder="Masukkan nomor telepon" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email-toko">Email</label>
+                <input type="email" id="email-toko" name="email-toko" placeholder="Masukkan email toko" required>
+            </div>
+
+            <!-- Jenis Layanan -->
+            <div class="form-group">
+                <label for="layanan-toko">Jenis Layanan</label>
+                <select id="layanan-toko" name="layanan-toko" required>
+                    <option value="">Pilih jenis layanan</option>
+                    <option value="laundry-express">Laundry Express</option>
+                    <option value="cuci-kering">Cuci Kering</option>
+                    <option value="laundry-boneka">Laundry Boneka</option>
+                    <option value="laundry-sepatu">Laundry Sepatu</option>
+                    <option value="laundry-kiloan">Laundry Kiloan</option>
+                </select>
+            </div>
+
+            <!-- Upload Logo Toko -->
+            <div class="form-group">
+                <label for="logo-toko">Upload Logo Toko</label>
+                <input type="file" id="logo-toko" name="logo-toko" accept="image/*" required>
+            </div>
+
+            <!-- Tombol Daftar -->
+            <div class="form-group">
+                <button type="submit">Daftar Sekarang</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
