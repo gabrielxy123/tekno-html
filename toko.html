@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,124 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', Arial, sans-serif;
-        }
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
-            padding-bottom: 80px; /* Ruang untuk navbar */
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 32px;
-            color: #2575fc;
-        }
-        .store-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .store-card {
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .store-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-        .store-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .store-info {
-            padding: 20px;
-        }
-        .store-info h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .store-info p {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 15px;
-        }
-        .store-info .rating {
-            color: #ffbf00;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .store-info .stats {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            color: #555;
-        }
-        .store-info .stats span {
-            display: flex;
-            align-items: center;
-        }
-        .store-info .stats span i {
-            margin-right: 5px;
-        }
-        .store-info button {
-            width: 100%;
-            padding: 10px;
-            background-color: #2575fc;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .store-info button:hover {
-            background-color: #1a5bbf;
-        }
-        .navbar {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: #005f73;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 15px 0;
-            font-weight: bold;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000; /* Pastikan navbar di atas konten lain */
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-        .navbar a:hover {
-            color: #ffdd57;
-        }
-        .navbar .material-icons {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/toko.css">
 </head>
+
 <body>
-    <h1>Daftar Toko</h1>
+    <h1>Toko Laundry</h1>
     <div class="store-container">
         <!-- Toko 1 -->
         <div class="store-card">
@@ -198,4 +86,5 @@
         <a href="akun.html"><span class="material-icons">person</span>Akun</a>
     </div>
 </body>
+
 </html>
