@@ -21,7 +21,6 @@
         }
         header {
             background: linear-gradient(135deg, #005f73, #0a9396);
-
             color: #fff;
             padding: 15px 30px;
             display: flex;
@@ -66,6 +65,12 @@
             text-decoration: none;
             color: #555;
             font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a i {
+            margin-right: 10px;
+            font-size: 18px;
         }
         .sidebar ul li a:hover {
             color: #ff5722;
@@ -131,10 +136,14 @@
     <div class="container">
         <aside class="sidebar">
             <ul>
-                <li><a href="#">Profil</a></li>
-                <li><a href="#">Pesanan Saya</a></li>
-                <li><a href="#">Pengaturan Akun</a></li>
-                <li><a href="#">Mulai Penjualan</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>Profil</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i>Pesanan Saya</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i>Pengaturan Akun</a></li>
+                <li><a href="#"><i class="fas fa-store"></i>Mulai Penjualan</a></li>
+                <!-- Menu Promo Diskon -->
+                <li><a href="#"><i class="fas fa-tags"></i>Promo Diskon</a></li>
+                <!-- Menu Ulasan Toko -->
+                <li><a href="#"><i class="fas fa-star"></i>Ulasan Toko</a></li>
             </ul>
         </aside>
         <main class="content">
